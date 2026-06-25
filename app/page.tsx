@@ -1,65 +1,183 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import FeaturedServices from "./components/FeaturedServices";
+import Process from "./components/Process";
+import TechStack from "./components/TechStack";
+import Stats from "./components/Stats";
+import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
+import BackgroundGlow from "./components/BackgroundGlow";
+import PremiumBackground from "./components/PremiumBackground";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <PageTransition>
+<main className="min-h-screen text-black relative overflow-hidden">
+  <div
+  className="
+  fixed
+  inset-0
+  -z-10
+  bg-[radial-gradient(circle_at_center,#d7ffff_0%,#f5f5f5_40%,#ffffff_100%)]
+  "
+/>
+    <PremiumBackground />
+        {/* Reusable Background Glow */}
+        <BackgroundGlow />
+
+        <div className="relative z-10">
+
+          {/* Floating Particles */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 bg-[#12B8B0] rounded-full"
+                initial={{
+                  x: Math.random() * 1500,
+                  y: Math.random() * 1000,
+                }}
+                animate={{
+                  y: [0, -300, 0],
+                  opacity: [0.2, 1, 0.2],
+                }}
+                transition={{
+                  duration: 5 + Math.random() * 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
+            ))}
+          </div>
+
+          <Navbar />
+
+          <Hero />
+
+          <FeaturedServices />
+
+          <Process />
+
+          <TechStack />
+
+          <Stats />
+          {/* Contact Preview Section */}
+<section className="max-w-7xl mx-auto px-10 py-24">
+
+  <div className="text-center mb-16">
+    <h2 className="text-5xl font-bold mb-4">
+      Get In Touch
+    </h2>
+
+    <p className="text-gray-600 text-lg">
+      Ready to transform your business with innovative technology solutions?
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-10">
+
+    {/* Contact Details */}
+    <div
+      className="
+      bg-white
+      rounded-3xl
+      border border-gray-100
+      shadow-lg
+      p-8
+      "
+    >
+      <h3 className="text-3xl font-bold mb-8 text-[#12B8B0]">
+        Contact Details
+      </h3>
+
+      <div className="space-y-6 text-gray-700">
+
+        <div>
+          <p className="font-semibold text-[#12B8B0]">
+            Email
+          </p>
+          <p>info@technova.com</p>
+        </div>
+
+        <div>
+          <p className="font-semibold text-[#12B8B0]">
+            Phone
+          </p>
+          <p>+91 XXXXX XXXXX</p>
+        </div>
+
+        <div>
+          <p className="font-semibold text-[#12B8B0]">
+            Address
+          </p>
+
+          <p>
+            No.12, 2nd Floor
+            <br />
+            Papanna Layout
+            <br />
+            Maruthi Nagar, Yelahanka
+            <br />
+            Bangalore - 560064
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+
+      </div>
     </div>
+
+    {/* Contact CTA */}
+    <div
+      className="
+      bg-white
+      rounded-3xl
+      border border-gray-100
+      shadow-lg
+      p-8
+      flex flex-col justify-center items-center
+      text-center
+      "
+    >
+      <h3 className="text-4xl font-bold mb-4">
+        Let's Build Together
+      </h3>
+
+      <p className="text-gray-600 mb-8">
+        Have an idea or project in mind?
+        Let's discuss how TechNova can help.
+      </p>
+
+      <a
+        href="/contact"
+        className="
+        bg-[#12B8B0]
+        text-white
+        px-8
+        py-4
+        rounded-xl
+        shadow-lg
+        hover:bg-[#0A2E57]
+        hover:-translate-y-1
+        transition-all
+        duration-300
+        "
+      >
+        Contact Us
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+          <Footer />
+
+        </div>
+
+      </main>
+    </PageTransition>
   );
 }
