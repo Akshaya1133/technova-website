@@ -9,12 +9,10 @@ import {
 
 export default function HeroTechWorld() {
   return (
-    <div className="relative w-[700px] h-[550px]">
-
+<div className="relative w-[560px] h-[460px]">
       {/* Background Glow */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[420px] h-[420px] bg-[#12B8B0]/6 blur-[100px] rounded-full" />
-      </div>
+<div className="w-[340px] h-[340px] bg-[#12B8B0]/6 blur-[90px] rounded-full" />      </div>
 
       {/* CONNECTION LINES */}
       <div className="absolute inset-0 pointer-events-none">
@@ -52,8 +50,9 @@ export default function HeroTechWorld() {
   <div
     className="
     absolute
-    w-64
-    h-40
+    
+    w-56
+h-36
     bg-white
     rounded-[36px]
     shadow-xl
@@ -65,8 +64,8 @@ export default function HeroTechWorld() {
   <div
     className="
     absolute
-    w-60
-    h-36
+    w-52
+h-32
     bg-[#12B8B0]/8
     rounded-[30px]
     blur-xl
@@ -79,8 +78,8 @@ export default function HeroTechWorld() {
   <div
     className="
     relative
-    w-60
-    h-32
+    w-52
+h-28
     bg-white
     rounded-[28px]
     shadow-[0_15px_40px_rgba(15,23,42,0.08)]
@@ -94,8 +93,7 @@ export default function HeroTechWorld() {
     <img
       src="/images/TECH-logo.png"
       alt="TechNova"
-      className="w-44 h-auto object-contain"
-    />
+className="w-36 h-auto object-contain"    />
   </div>
 
   {/* Isometric base */}
@@ -106,7 +104,7 @@ export default function HeroTechWorld() {
     top-full
     -translate-x-1/2
     mt-2
-    w-52
+    w-44
     h-4
     bg-white
     rounded-full
@@ -127,14 +125,14 @@ export default function HeroTechWorld() {
               }}
               className="
               absolute
-              top-12
-              left-32
+              top-10
+left-20
               "
             >
               <div
                 className="
-                w-60
-                h-40
+                w-52
+h-36
                 bg-white
                 rounded-3xl
                 shadow-xl
@@ -160,7 +158,7 @@ export default function HeroTechWorld() {
                 </div>
               </div>
 
-              <div className="w-64 h-4 bg-white rounded-full shadow-lg mx-auto -mt-1" />
+              <div className="w-56 h-3 bg-white rounded-full shadow-lg mx-auto -mt-1" />
             </motion.div>
 
             {/* CLOUD INFRASTRUCTURE */}
@@ -176,17 +174,17 @@ export default function HeroTechWorld() {
               }}
               className="
               absolute
-              top-14
-              right-28
+              top-10
+right-16
               "
             >
               <Cloud className="w-10 h-10 text-[#12B8B0] mx-auto mb-2" />
 
               <div className="space-y-2">
-                <div className="w-28 h-7 bg-white rounded-xl shadow-md" />
-                <div className="w-28 h-7 bg-white rounded-xl shadow-md" />
-                <div className="w-28 h-7 bg-white rounded-xl shadow-md" />
-                <div className="w-28 h-7 bg-white rounded-xl shadow-md" />
+                <div className="w-24 h-6 bg-white rounded-xl shadow-md" />
+                <div className="w-24 h-6 bg-white rounded-xl shadow-md" />
+                <div className="w-24 h-6 bg-white rounded-xl shadow-md" />
+                <div className="w-24 h-6 bg-white rounded-xl shadow-md" />
               </div>
             </motion.div>
 
@@ -204,7 +202,7 @@ export default function HeroTechWorld() {
               className="
               absolute
               bottom-12
-              left-24
+left-12
               bg-white
               rounded-[24px]
               shadow-xl
@@ -241,17 +239,17 @@ export default function HeroTechWorld() {
               }}
               className="
               absolute
-              bottom-14
-              right-24
+              bottom-12
+right-16
               "
             >
               <div className="space-y-2">
-                <div className="w-28 h-8 bg-white rounded-lg shadow-md" />
-                <div className="w-28 h-8 bg-white rounded-lg shadow-md" />
-                <div className="w-28 h-8 bg-white rounded-lg shadow-md" />
+                <div className="w-24 h-7 bg-white rounded-lg shadow-md" />
+                <div className="w-24 h-7 bg-white rounded-lg shadow-md" />
+                <div className="w-24 h-7 bg-white rounded-lg shadow-md" />
               </div>
 
-              <div className="w-32 h-3 bg-white rounded-full shadow-md mt-3 mx-auto" />
+              <div className="w-28 h-3 bg-white rounded-full shadow-md mt-3 mx-auto" />
             </motion.div>
 
             {/* DATABASE */}
@@ -268,7 +266,7 @@ export default function HeroTechWorld() {
               className="
               absolute
               bottom-8
-              right-8
+right-2
               "
             >
               <div

@@ -104,11 +104,11 @@ and Custom Software Solutions.
   </p>
 </section>
 
-{/* Why Businesses Choose TechNova */}
+{/* Our Core Values */}
 <section className="max-w-7xl mx-auto px-10 py-20">
 
   <h2 className="text-5xl font-bold text-center mb-16">
-    Why Businesses Choose TechNova
+    Our Core Values
   </h2>
 
   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -32,27 +32,7 @@ export default function Home() {
         <div className="relative z-10">
 
           {/* Floating Particles */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-2 h-2 bg-[#12B8B0] rounded-full"
-                initial={{
-                  x: Math.random() * 1500,
-                  y: Math.random() * 1000,
-                }}
-                animate={{
-                  y: [0, -300, 0],
-                  opacity: [0.2, 1, 0.2],
-                }}
-                transition={{
-                  duration: 5 + Math.random() * 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-          </div>
+      
 
           <Navbar />
 
