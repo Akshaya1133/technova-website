@@ -35,8 +35,8 @@ export default function Navbar() {
             alt="TechNova"
             width={200}
             height={60}
-            className="w-28 sm:w-36 lg:w-40 h-auto"
             priority
+            className="w-28 sm:w-36 lg:w-40 h-auto"
           />
         </Link>
 
@@ -53,27 +53,40 @@ export default function Navbar() {
           font-medium
           "
         >
-          <Link href="/" className="hover:text-[#12B8B0] transition">
+          <Link
+            href="/"
+            className="hover:text-[#12B8B0] transition-all duration-300"
+          >
             Home
           </Link>
 
-          <Link href="/about" className="hover:text-[#12B8B0] transition">
+          <Link
+            href="/about"
+            className="hover:text-[#12B8B0] transition-all duration-300"
+          >
             About
           </Link>
 
-          <Link href="/services" className="hover:text-[#12B8B0] transition">
+          <Link
+            href="/services"
+            className="hover:text-[#12B8B0] transition-all duration-300"
+          >
             Services
           </Link>
 
-          <Link href="/contact" className="hover:text-[#12B8B0] transition">
+          <Link
+            href="/contact"
+            className="hover:text-[#12B8B0] transition-all duration-300"
+          >
             Contact
           </Link>
         </div>
 
-        {/* Mobile Button */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Menu"
         >
           {menuOpen ? (
             <X size={28} />
@@ -89,17 +102,17 @@ export default function Navbar() {
           className="
           md:hidden
           bg-white
-          shadow-lg
           border-t
           border-gray-100
+          shadow-lg
           "
         >
-          <div className="flex flex-col py-4">
+          <div className="flex flex-col py-3">
 
             <Link
               href="/"
               onClick={() => setMenuOpen(false)}
-              className="px-6 py-3 hover:bg-gray-50"
+              className="px-6 py-3 hover:bg-gray-50 transition"
             >
               Home
             </Link>
@@ -107,7 +120,7 @@ export default function Navbar() {
             <Link
               href="/about"
               onClick={() => setMenuOpen(false)}
-              className="px-6 py-3 hover:bg-gray-50"
+              className="px-6 py-3 hover:bg-gray-50 transition"
             >
               About
             </Link>
@@ -115,7 +128,7 @@ export default function Navbar() {
             <Link
               href="/services"
               onClick={() => setMenuOpen(false)}
-              className="px-6 py-3 hover:bg-gray-50"
+              className="px-6 py-3 hover:bg-gray-50 transition"
             >
               Services
             </Link>
@@ -123,7 +136,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="px-6 py-3 hover:bg-gray-50"
+              className="px-6 py-3 hover:bg-gray-50 transition"
             >
               Contact
             </Link>
