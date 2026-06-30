@@ -18,14 +18,11 @@ export default function AboutPage() {
 
           <Navbar />
 
-<section className="px-10 pt-12 pb-16 text-center">
-  
-              <h1 className="text-6xl md:text-7xl font-bold mb-6">
-  About <span className="text-[#12B8B0]">TechNova</span>
+<section className="px-5 sm:px-8 lg:px-10 pt-16 pb-14 text-center">  
+<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-5">  About <span className="text-[#12B8B0]">TechNova</span>
 </h1>
 
-            <p className="max-w-4xl mx-auto text-xl text-gray-600">
-              TechNova Private Limited is a technology company focused on
+            <p className="max-w-4xl mx-auto text-base md:text-lg text-gray-600">
               building innovative digital solutions that help businesses
               grow, automate processes, and achieve digital transformation.
             </p>
@@ -33,65 +30,85 @@ export default function AboutPage() {
 
           {/* Mission & Vision */}
          {/* Mission & Vision */}
-<section className="max-w-6xl mx-auto px-10 py-10">
-  <div className="grid md:grid-cols-2 gap-10">
+<section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-14">
 
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+    {/* Mission */}
     <div
       className="
       bg-white
+      rounded-3xl
+      border
+      border-gray-200
       shadow-lg
-      border border-gray-100
-      rounded-2xl
       p-8
+      lg:p-10
+      min-h-[280px]
+      flex
+      flex-col
+      justify-center
       hover:-translate-y-2
-      hover:shadow-2xl
+      hover:border-[#12B8B0]
+      hover:shadow-[0_20px_50px_rgba(18,184,176,0.15)]
       transition-all
       duration-300
       "
     >
-      <h2 className="text-3xl font-bold mb-4 text-[#12B8B0]">
+      <h2 className="text-3xl font-bold text-[#12B8B0] mb-6">
         Our Mission
       </h2>
 
-      <p className="text-gray-600">
-        To empower businesses with modern technology solutions,
-        helping them innovate, scale, and succeed in the digital era.
+      <p className="text-lg md:text-base text-gray-600 leading-8">
+        To empower businesses with modern technology solutions by delivering
+        innovative software, scalable digital platforms, and reliable technology
+        services that help organizations grow, innovate, and succeed in the
+        digital era.
       </p>
     </div>
 
+    {/* Vision */}
     <div
       className="
       bg-white
+      rounded-3xl
+      border
+      border-gray-200
       shadow-lg
-      border border-gray-100
-      rounded-2xl
       p-8
+      lg:p-10
+      min-h-[280px]
+      flex
+      flex-col
+      justify-center
       hover:-translate-y-2
-      hover:shadow-2xl
+      hover:border-[#12B8B0]
+      hover:shadow-[0_20px_50px_rgba(18,184,176,0.15)]
       transition-all
       duration-300
       "
     >
-      <h2 className="text-3xl font-bold mb-4 text-[#12B8B0]">
+      <h2 className="text-3xl font-bold text-[#12B8B0] mb-6">
         Our Vision
       </h2>
 
-      <p className="text-gray-600">
-        To become a trusted global technology partner known for
-        innovation, quality, and customer success.
+      <p className="text-lg md:text-base text-gray-600 leading-8">
+        To become a trusted global technology partner recognized for innovation,
+        quality, customer success, and delivering world-class digital solutions
+        that create lasting business value.
       </p>
     </div>
 
   </div>
+
 </section>
 
 {/* Story */}
-<section className="max-w-6xl mx-auto px-10 py-20">
-  <h2 className="text-5xl font-bold text-center mb-10">
+<section className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10 py-16">  <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
     Who We Are
   </h2>
 
-  <p className="text-gray-600 text-center text-lg leading-8 max-w-4xl mx-auto">
+  <p className="text-gray-600 text-center text-base leading-7 max-w-4xl mx-auto">
     TechNova Private Limited is a modern software
 development company specializing in building
 high-performance digital solutions.
@@ -105,13 +122,12 @@ and Custom Software Solutions.
 </section>
 
 {/* Our Core Values */}
-<section className="max-w-7xl mx-auto px-10 py-20">
-
-  <h2 className="text-5xl font-bold text-center mb-16">
+<section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16">
+  <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
     Our Core Values
   </h2>
 
-  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
     {[
       {
@@ -143,7 +159,7 @@ and Custom Software Solutions.
         rounded-3xl
         border
         border-gray-200
-        p-10
+        p-6
         text-center
         hover:-translate-y-2
         hover:border-[#12B8B0]
@@ -154,10 +170,10 @@ and Custom Software Solutions.
       >
         <div
           className="
-          w-16
-          h-16
+          w-14
+          h-14
           mx-auto
-          mb-6
+          mb-5
           rounded-2xl
           bg-[#12B8B0]/10
           flex
@@ -173,11 +189,11 @@ and Custom Software Solutions.
           {item.icon}
         </div>
 
-        <h3 className="text-2xl font-bold mb-4">
+        <h3 className="text-xl font-bold mb-3">
           {item.title}
         </h3>
 
-        <p className="text-gray-600 leading-7">
+        <p className="text-gray-600 leading-6 text-sm">
           {item.desc}
         </p>
       </div>

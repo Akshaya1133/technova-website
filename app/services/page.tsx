@@ -98,10 +98,10 @@ export default function ServicesPage() {
       border border-gray-100
       shadow-lg
       rounded-3xl
-      p-8
-      min-h-[120px]
-flex
-items-center
+      p-5
+      min-h-[96px]
+      flex
+      items-center
       cursor-pointer
       hover:-translate-y-2
       hover:border-[#12B8B0]
@@ -117,7 +117,7 @@ items-center
       border-2 border-[#12B8B0]
       shadow-2xl
       rounded-3xl
-      p-8
+      p-5
       cursor-pointer
       scale-100
       transition-all
@@ -127,7 +127,7 @@ items-center
       bg-white
       border border-gray-100
       rounded-3xl
-      p-8
+      p-5
       opacity-40
       scale-[0.96]
       transition-all
@@ -140,12 +140,12 @@ items-center
         <Navbar />
 
         {/* Header */}
-        <section className="px-10 py-20 text-center">
-          <h1 className="text-6xl font-bold text-[#12B8B0] mb-6">
+        <section className="px-6 xl:px-10 py-14 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#12B8B0] mb-4">
             Our Services
           </h1>
 
-<p className="text-gray-600 max-w-3xl mx-auto text-lg">
+<p className="text-gray-600 max-w-2xl mx-auto text-base md:text-base">
               TechNova provides complete digital transformation solutions for
             startups, businesses and enterprises.
           </p>
@@ -163,16 +163,16 @@ className={`${getPopupPositionClass()}
 fixed
 top-[58%]
 z-20
-w-[650px]
+w-[520px]
 max-w-[90vw]
 -translate-x-1/2
 -translate-y-1/2
-rounded-[32px]
+rounded-[28px]
 border
 border-white/40
 bg-white/70
 backdrop-blur-2xl
-p-8
+p-6
 ${getPopupAlignmentClass()}
 shadow-[0_20px_60px_rgba(18,184,176,0.20)]
 `}            ><div
@@ -185,14 +185,15 @@ shadow-[0_20px_60px_rgba(18,184,176,0.20)]
   blur-3xl
   "
 />
-<h2 className="text-5xl font-bold text-[#12B8B0] mb-4">        
+<h2 className="text-3xl md:text-4xl font-bold text-[#12B8B0] mb-4">        
           {activeService.title}
               </h2>
 <div className="grid grid-cols-2 gap-4 mt-6">
-  {activeService.details.map((item: string) => (
+  {activeService.details.map((item: string, idx: number) => (
     <div
       key={item}
-      className="
+      className={
+        `
       bg-white
       hover:bg-[#f0fffd]
       border
@@ -207,7 +208,9 @@ shadow-[0_20px_60px_rgba(18,184,176,0.20)]
       hover:shadow-md
       transition-all
       duration-300
-      "
+      ${idx === 4 ? 'col-span-2 max-w-[280px] mx-auto' : ''}
+      `
+      }
     >
       ✓ {item}
     </div>
@@ -217,7 +220,7 @@ shadow-[0_20px_60px_rgba(18,184,176,0.20)]
           )}
 
           {/* Service Cards */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5">
             {/* Left Side */}
             <div className="space-y-6">
               {services.slice(0, 3).map((service, index) => (
@@ -263,11 +266,11 @@ shadow-[0_20px_60px_rgba(18,184,176,0.20)]
         {/* CTA */}
 
         <section className="text-center py-24">
-<h2 className="text-6xl md:text-7xl font-bold mb-6">
+<h2 className="text-4xl md:text-5xl font-bold mb-6">
       Let's Build Something Amazing
   </h2>
 
-  <p className="text-gray-600 text-xl mb-8">
+  <p className="text-gray-600 text-lg mb-8">
     From websites to AI-powered solutions, we help businesses scale faster.
   </p>
 
@@ -276,9 +279,10 @@ shadow-[0_20px_60px_rgba(18,184,176,0.20)]
             className="
             inline-block
             bg-[#12B8B0]
+            text-white
             hover:bg-[#0A2E57]
             hover:-translate-y-1
-shadow-lg
+            shadow-lg
             px-8
             py-4
             rounded-lg

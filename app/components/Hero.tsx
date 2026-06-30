@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-16 lg:py-24 px-5 sm:px-8 lg:px-10">
+    <section className="relative overflow-hidden py-12 lg:py-16 px-5 sm:px-8 lg:px-10">
 
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
@@ -32,10 +32,11 @@ export default function Hero() {
         grid-cols-1
         lg:grid-cols-2
         items-center
-        gap-12
-        lg:gap-20
+        gap-10
+        lg:gap-16
         "
       >
+
         {/* LEFT SIDE */}
         <div className="text-center lg:text-left">
 
@@ -82,7 +83,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="mt-8"
+            className="mt-6"
           >
             <p
               className="
@@ -102,7 +103,7 @@ export default function Hero() {
 
             <p
               className="
-              mt-6
+              mt-4
               max-w-xl
               mx-auto
               lg:mx-0
@@ -122,7 +123,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.35 }}
             className="
-            mt-10
+            mt-8
             flex
             flex-col
             sm:flex-row
@@ -180,11 +181,10 @@ export default function Hero() {
         <div
           className="
           hidden
-          md:flex
+          sm:flex
           justify-center
           items-center
-          scale-90
-          xl:scale-100
+          w-full
           "
         >
           <HeroTechWorld />

@@ -1,94 +1,136 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Globe,
+  Smartphone,
+  Code2,
+  Palette,
+  Cloud,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function Services() {
   const services = [
     {
-      title: "Mobile App Development",
-      description:
-        "Android and iOS applications built with Flutter and modern technologies.",
-    },
-    {
       title: "Website Development",
       description:
-        "Responsive business websites using Next.js, React and Tailwind CSS.",
+        "Modern, responsive, and high-performance websites built with Next.js, React, and Tailwind CSS.",
+      icon: <Globe size={42} />,
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "Cross-platform Android & iOS applications developed using Flutter and modern technologies.",
+      icon: <Smartphone size={42} />,
     },
     {
       title: "Custom Software",
       description:
-        "ERP systems, CRM platforms and custom business automation solutions.",
+        "ERP systems, CRM platforms, business automation, and enterprise software tailored to your needs.",
+      icon: <Code2 size={42} />,
     },
     {
-      title: "UI/UX Design",
+      title: "UI / UX Design",
       description:
-        "Modern, user-friendly interfaces focused on great user experience.",
+        "Beautiful, intuitive, and user-focused interface designs that improve customer experience.",
+      icon: <Palette size={42} />,
     },
     {
-      title: "Cloud & Hosting",
+      title: "Cloud Solutions",
       description:
-        "Cloud deployment, hosting, DevOps and infrastructure management.",
+        "Cloud deployment, AWS infrastructure, DevOps, hosting, security, and maintenance.",
+      icon: <Cloud size={42} />,
     },
     {
       title: "Testing & QA",
       description:
-        "Comprehensive testing to ensure reliability, security and performance.",
+        "Comprehensive software testing to ensure quality, performance, security, and reliability.",
+      icon: <ShieldCheck size={42} />,
     },
   ];
 
   return (
-    <section className="px-10 py-20">
-      <h2 className="text-4xl font-bold text-center mb-10">
-        Our Services
-      </h2>
+<section className="relative px-5 sm:px-8 lg:px-10 py-12 lg:py-14"><div className="max-w-5xl mx-auto">
+          {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-center mb-4"
+        >
+          Our Services
+        </motion.h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {services.map((service) => (
-          <motion.div
-            key={service.title}
-            whileHover={{ scale: 1.05 }}
-            className="
-            group
-            relative
-            bg-zinc-900/50
-            border
-            border-[#12B8B0]/20
-            rounded-2xl
-            p-8
-            min-h-[180px]
-            hover:border-[#12B8B0]
-            hover:shadow-[0_0_25px_rgba(18,184,176,0.35)]
-            transition-all
-            duration-300
-            overflow-hidden
-            cursor-pointer
-            "
-          >
-            <h3 className="text-xl font-semibold">
-              {service.title}
-            </h3>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="text-center text-gray-600 text-lg max-w-3xl mx-auto mb-12"
+        >
+          End-to-end digital solutions designed to help businesses innovate,
+          scale, and succeed.
+        </motion.p>
 
-            <div
+        {/* Cards */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.01,
+              }}
               className="
-              absolute
-              inset-0
-              bg-zinc-900/95
-              flex
-              items-center
-              justify-center
-              p-6
-              opacity-0
-              group-hover:opacity-100
-              transition-all
-              duration-300
+                group
+                bg-white
+                border
+                border-gray-200
+                rounded-3xl
+                p-5
+                shadow-sm
               "
             >
-              <p className="text-center text-gray-300">
+              {/* Icon */}
+              <div
+                className="
+                  w-14
+                  h-14
+                  rounded-2xl
+                  bg-[#12B8B0]/10
+                  flex
+                  items-center
+                  justify-center
+                  text-[#12B8B0]
+                  mb-5
+                  group-hover:bg-[#12B8B0]
+                  group-hover:text-white
+                  transition-all
+                  duration-300
+                "
+              >
+                {service.icon}
+              </div>
+
+              <h3 className="text-xl md:text-2xl font-semibold mb-3">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-600 leading-6 text-base">
                 {service.description}
               </p>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

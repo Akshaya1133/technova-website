@@ -31,56 +31,75 @@ export default function Process() {
   ];
 
   return (
-    <section className="px-10 py-24">
-      <h2 className="text-5xl font-bold text-center mb-4">
-        Our Process
-      </h2>
+    <section className="relative px-5 sm:px-8 lg:px-10 py-12 lg:py-16">
 
-<p className="text-center text-gray-600 mb-16">
+      <div className="max-w-7xl mx-auto">
+
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-center mb-4"
+        >
+          Our Process
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-10"
+        >
           A streamlined approach that turns your ideas into reality.
-      </p>
+        </motion.p>
 
-      <div className="grid md:grid-cols-4 gap-8">
-        {steps.map((step, index) => (
-          <motion.div
-            key={step.title}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.2,
-            }}
-            className="
-bg-white
-border
-border-gray-200
-rounded-2xl
-p-8
-text-center
-hover:border-[#12B8B0]
-hover:shadow-2xl
-hover:-translate-y-3
-hover:shadow-2xl
-hover:scale-[1.02]
-transition-all
-duration-500
-"
-          >
-            <div className="text-5xl font-bold text-[#12B8B0] mb-4">
-              {step.number}
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
-            <h3 className="text-2xl font-bold mb-4">
-              {step.title}
-            </h3>
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+              }}
+              className="
+                bg-white
+                border
+                border-gray-200
+                rounded-2xl
+                p-8
+                text-center
+                hover:border-[#12B8B0]
+                hover:shadow-2xl
+                hover:-translate-y-3
+                hover:scale-[1.02]
+                transition-all
+                duration-500
+              "
+            >
+              <div className="text-5xl font-bold text-[#12B8B0] mb-4">
+                {step.number}
+              </div>
 
-<p className="text-gray-600">
+              <h3 className="text-2xl font-bold mb-4">
+                {step.title}
+              </h3>
+
+              <p className="text-gray-600 leading-7">
                 {step.description}
-            </p>
-          </motion.div>
-        ))}
+              </p>
+            </motion.div>
+          ))}
+
+        </div>
+
       </div>
+
     </section>
   );
 }
